@@ -1,0 +1,16 @@
+.weather {
+  border-radius: 30px;
+  height: 100%;
+  padding: 10px;
+  margin-top: 1rem;
+  background-color: yellow;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  transition-duration: 300ms;
+  width: 20%;
+}
+
+.search {
+  display: flex;
+  margin-bottom: 1rem;
+}

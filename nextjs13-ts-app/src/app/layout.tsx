@@ -20,7 +20,8 @@ export default function RootLayout({
         <main>
           <nav className={styles.nav}>
             <Link href='/'>Home</Link>
-            <Link href='/facts'>Facts</Link>
+            <Link href='/dogfacts'>Dog Facts</Link>
+            <Link href='/weather'>Weather</Link>
           </nav>
         </main>
         {children}

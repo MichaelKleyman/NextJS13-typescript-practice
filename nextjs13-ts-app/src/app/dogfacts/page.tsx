@@ -1,6 +1,6 @@
 //this route will fetch all the notes from pocketbase and provides a form to create a new note
 import Link from 'next/link';
-import styles from './globals.module.css';
+import styles from './dogfacts.module.css';
 
 async function getFacts() {
   //what is returned is all server rendered, however nextjs now automatically caches this route because the route segment is not dynamic, so its treated as a static page.
@@ -20,7 +20,7 @@ export default async function page() {
 
   return (
     <div>
-      <h1>Facts</h1>
+      <h1>Dog Facts</h1>
       <div className={styles.grid}>
         {facts?.map((fact, i) => (
           <Fact key={i} fact={fact} index={i} />
@@ -33,7 +33,7 @@ export default async function page() {
 // fact component below
 function Fact({ fact, index }: any) {
   return (
-    <Link href={`/facts/${index}`} className={styles.solofact}>
+    <Link href={`/dogfacts/${index}`} className={styles.solofact}>
       <div className={styles.facts}>
         <h2>Dog Fact #{index + 1}</h2>
         <h5>{fact}</h5>

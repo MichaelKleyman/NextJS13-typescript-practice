@@ -1,4 +1,4 @@
-import styles from '../globals.module.css';
+import styles from '../dogfacts.module.css';
 
 //this is all a dynamic route???
 //data fetching function retrieving individual item
