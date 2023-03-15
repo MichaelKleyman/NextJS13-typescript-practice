@@ -1,0 +1,32 @@
+.facts {
+  border-radius: 30px;
+  height: 100%;
+  padding: 10px;
+  background-color: yellow;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  transition-duration: 300ms;
+}
+
+.facts:hover {
+  transform: scale(1.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.solofact {
+  text-decoration: none;
+}
+
+.individual {
+  height: 100px;
+  padding: 10px;
+  background-color: yellow;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  transition-duration: 300ms;
+}
