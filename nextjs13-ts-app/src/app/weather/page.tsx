@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './weather.module.css';
 // import { useRouter } from 'next/navigation';
 
@@ -18,12 +18,20 @@ async function getWeather(zipcode: string) {
 }
 
 export default function WeatherPage() {
+  interface WeatherData {
+    name: string;
+    main: {
+      temp: number;
+    };
+    weather: {
+      description: '';
+    }[];
+  }
+
   const [zipcode, setZipcode] = useState('');
-  const [weatherObj, setWeather] = useState();
+  const [weatherObj, setWeather] = useState<WeatherData>();
 
-  // const router = useRouter();
-
-  async function searchWeather(e) {
+  async function searchWeather(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     const data = await getWeather(zipcode);
     setWeather(data);
@@ -40,7 +48,7 @@ export default function WeatherPage() {
           value={zipcode}
           onChange={(e) => setZipcode(e.target.value)}
         />
-        <button disabled={!zipcode.length} onClick={(e) => searchWeather(e)}>
+        <button disabled={!zipcode.length} onClick={searchWeather}>
           Search
         </button>
       </form>
